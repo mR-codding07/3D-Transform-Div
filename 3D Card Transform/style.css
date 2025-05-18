@@ -1,0 +1,59 @@
+body{
+  background-color: #0f0f1a;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+
+}
+h1{
+  font-size: 2.5rem;
+}
+.green{
+  color: #4ade80;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+  perspective: 1000px;
+}
+.box{
+  width: 120px;
+  height: 80px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.box1:hover{
+transform: perspective(500px) rotateY(45deg);
+}
+
+.box2:hover{
+transform: perspective(500px) translate(8px) rotateY(45deg);
+}
+
+.box3:hover{
+transform: perspective(500px) scaleY(0.7) rotateY(45deg);
+}
+
+.box4:hover{
+transform: perspective(200px) rotateX(40deg) scale(1.2);
+}
+
+.box5:hover{
+transform: matrix3d(0.6, 0.1, 0.7, 0,
+ -0.5, 0.8, 0.1, 0,
+  -0.6, -0.5, 0.5, 0,
+   0, 0, 0, 1);
+}
